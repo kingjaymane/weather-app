@@ -9,11 +9,7 @@ const Home = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
   const [error, setError] = useState("");
-
-  // Use backticks for template literals
   const url = `http://api.weatherapi.com/v1/forecast.json?key=0ae91dfec7c946a4aa7110436240110&q=${location}&days=7&aqi=yes&alerts=yes`;
-
-
   
   const handleSearch = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
@@ -25,8 +21,8 @@ const Home = () => {
         }
         const data = await response.json();
         setData(data);
-        setLocation(""); // Clear the location input after search
-        setError(""); // Reset any previous error messages
+        setLocation(""); 
+        setError(""); 
       } catch (error) {
         setError("City not found");
         setData({});
