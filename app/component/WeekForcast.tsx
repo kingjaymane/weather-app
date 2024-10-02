@@ -2,7 +2,6 @@
 const WeekForcast = () => {
   return (
     <div>
-      WeekForcast
     </div>
   )
 }

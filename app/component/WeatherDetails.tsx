@@ -2,7 +2,6 @@
 const WeatherDetails = () => {
   return (
     <div>
-      Weather Details
     </div>
   )
 }
