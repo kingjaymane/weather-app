@@ -3,7 +3,6 @@ import React from "react";
 import Input from "./component/Input";
 import { useState } from "react";
 import Current from "./component/Current";
-import WeatherDetails from "./component/WeatherDetails";
 import WeekForcast from "./component/WeekForcast";
 
 const Home = () => {
@@ -14,6 +13,8 @@ const Home = () => {
   // Use backticks for template literals
   const url = `http://api.weatherapi.com/v1/forecast.json?key=0ae91dfec7c946a4aa7110436240110&q=${location}&days=7&aqi=yes&alerts=yes`;
 
+
+  
   const handleSearch = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
@@ -56,9 +57,6 @@ const Home = () => {
         <div>
           <Current data={data}/>
           <WeekForcast data={data}/>
-        </div>
-        <div>
-          <WeatherDetails /> 
         </div>
       </>
     )
